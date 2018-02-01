@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+<!-- 横置き対応 -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <script src="js/web.js"></script>
+    <script defer src="js/fontawesome-all.min.js"></script>
+    <title></title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="select">
+            <i style="color:greenyellow;" class="fa fa-youtube-play" aria-hidden="true"></i>
+            <div class="left-pane">
+                <div class="up80perc-scroll">
+                    <div class="flex-row-between hpx">
+                        <div class="data video-selected">
+                            <div>vidoe</div>
+                            <div>
+                                <i style="color:#555;position:absolute;top:5px;right:5px;" class="fa fa-times-circle"></i>
+                            </div>
+                        </div>
+                        <div class="data">
+                            <div>vidoe</div>
+                            <div>
+                                <i style="color:#555;position:absolute;top:5px;right:5px;" class="fa fa-times-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="addVideos" class="flex-row-center">
+                    <div id="addButton-outter">
+                        <div id="addButton-inner">
+                            <div>
+                                <i class="fa fa-plus-square"></i>
+                            </div>
+                            <div> 動画素材を追加 </div>
+                            <input id="addVideo" type="file" accept="video/*" name="addinput" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-pane">
+                <div class="flex-row-center-80perc">
+                    <div id="video-file-preview">
+                        <video id="videoPreview" src="video.mp4" autoplay="true" muted="true" controls="true"></video>
+                    </div>
+                </div>
+                <div class="flex-row-center">
+                    <div id="select-done">
+                        <div id="select-done-outter">
+                            <div id="select-done-inner">
+                                <i style="color:greenyellow;" class="fas fa-check"></i>
+                                <div>合成する</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="processing">
+            <div class="circle">
+                <i style="color:greenyellow;font-size:50px;" class="fas fa-circle-notch fa-spin"></i>
+            </div>
+            <div class="bar">
+                <div class="bar_back"></div>
+                <div class="bar_front"></div>
+            </div>
+            <div class="progress">
+                <div class="caption">
+                    <div class="progress-icon">
+                    </div>
+                    <div class="progress-text">
+                        アップロード
+                    </div>
+                </div>
+                <div class="caption">
+                    <div class="progress-icon">
+                    </div>
+                    <div class="progress-text">
+                        音声の解析
+                    </div>
+                </div>
+                <div class="caption">
+                    <div class="progress-icon">
+                    </div>
+                    <div class="progress-text">
+                        動画の解析
+                    </div>
+                </div>
+                <div class="caption">
+                    <div class="progress-icon">
+                    </div>
+                    <div class="progress-text">
+                        動画の生成
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="preview">
+            <div id="result-preview">
+                <div class="preview-window">
+                    <video id="completedVideo" src="video.mp4" muted="true" controls="true"></video>
+                </div>
+            </div>
+            <div id="result-buttons" class="flex-row-between">
+                <div id="retry" class="button-finish">RETRY</div>
+                <div id="finish" class="button-finish">OK</div>
+            </div>
+            <div id="share">
+                Share to
+                <div>Youtube</div>
+                <div>Instagram</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
